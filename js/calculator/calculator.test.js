@@ -15,3 +15,20 @@ test('subtract 5 - 4 to equal 1', () => {
 test('subtract -5 - -10 to equal 5', () => {
   expect(calculator.subtract(-5, -10)).toBe(5);
 });
+test('multiply 2 * 3 to equal 6', () => {
+  expect(calculator.multiply(2, 3)).toBe(6);
+});
+
+test('multiply 5 * 0 to equal 0', () => {
+  expect(calculator.multiply(5, 0)).toBe(0);
+});
+test('divide 10 / 2 to equal 5', () => {
+  expect(calculator.divide(10, 2)).toBe(5);
+});
+
+test('divide 9 / 3 to equal 3', () => {
+  expect(calculator.divide(9, 3)).toBe(3);
+});
+test('divide by 0 should throw error', () => {
+  expect(() => calculator.divide(10, 0)).toThrow('Cannot divide by zero');
+});
